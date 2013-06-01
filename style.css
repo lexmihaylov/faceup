@@ -1,0 +1,121 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: white;
+    overflow: hidden;
+    
+}
+
+.activity {
+    background: white;
+    position: absolute;
+    top: 43px;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+    -webkit-transform: translate3d(110%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    overflow-y: scroll;
+    z-index: auto;
+    background: #FCF4EA;
+}
+
+.activity.active {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#titleBar {
+    background: rgb(173,0,2); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(173,0,2,1) 0%, rgba(255,40,44,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(173,0,2,1)), color-stop(100%,rgba(255,40,44,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(173,0,2,1) 0%,rgba(255,40,44,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(173,0,2,1) 0%,rgba(255,40,44,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(173,0,2,1) 0%,rgba(255,40,44,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(173,0,2,1) 0%,rgba(255,40,44,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad0002', endColorstr='#ff282c',GradientType=0 ); /* IE6-9 */
+
+    height: 43px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#titleBar #logo {
+    background-image: url(resourse/logo.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 43px;
+    width: 111px;
+    float: left;
+    padding-left: 10px;
+    
+    border-top-right-radius: 5px;
+}
+
+#toolBar {
+    background: black;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#loading {
+    display: none;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    left: 0;
+    top: 50px;
+    bottom: 50px;
+    right: 0;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 9999;
+    color: white;
+    font-weight: bold;
+}
+
+#loading span {
+    width: 100px;
+    height: 26px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    margin-left: -50px;
+    margin-top: -13px;
+}
+
+.image-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.image-list li {
+    display: block;
+    padding: 2px;
+    height: 60px;
+    border-bottom: 1px solid rgb(227, 6, 9);
+}
+
+.image-list li .image {
+    display: block;
+    float:left;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    margin-right: 20px;
+    background: no-repeat;
+    background-size: cover;
+}
+
+.image-list li:hover {
+    background: rgb(96, 174, 200);
+}
