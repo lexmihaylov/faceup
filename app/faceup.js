@@ -1,12 +1,22 @@
 var FaceUp = {
     init: function () {
-        this.Activity.main = new Main();
-        this.Activity.latest = new LatestPhotos();
-        this.Activity.rated = new RatedPhotos();
-        this.Activity.my = new MyPhotos();
+        FaceUp.Activity.main = new Main();
+        FaceUp.Activity.latest = new LatestPhotos();
+        FaceUp.Activity.rated = new RatedPhotos();
+        FaceUp.Activity.my = new MyPhotos();
+        
+        FaceUp.CameraButton = $('#cameraBtn');
+        FaceUp.StatButton = $('#statBtn');
+        FaceUp.PeopleButton = $('#peopleBtn');
 
-        this.body = $('body');
-        this.loading = $('#loading');
+        FaceUp.body = $('body');
+        FaceUp.loading = $('#loading');
+    },
+    
+    buttonInit: function() {
+        FaceUp.PeopleButton.on('touchend', function() {
+            FaceUp.Activity.latest.show();
+        });
     }
 };
 
@@ -19,7 +29,8 @@ FaceUp.Api = "http://localhost/faceup/";
 FaceUp.Activity = {};
         
 FaceUp.window.on('load', function() {
-    FaceUp.init();
+    //FaceUp.init();
     document.addEventListener('deviceready', function() {
+        FaceUp.init();
     }, false);
 });

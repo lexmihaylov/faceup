@@ -8,42 +8,58 @@
             @import url('style.css');
         </style>
         <script type="text/javascript" src="phonegap.js"></script>
-        
+
         <script type="text/javascript" src="lib/jquery.js"></script>
         <script type="text/javascript" src="app/Activity.js"></script>
         <script type="text/javascript" src="app/Main.js"></script>
         <script type="text/javascript" src="app/LatestPhotos.js"></script>
         <script type="text/javascript" src="app/RatedPhotos.js"></script>
         <script type="text/javascript" src="app/MyPhotos.js"></script>
-        
+
         <script type="text/javascript" src="app/faceup.js"></script>
     </head>
     <body>
-        <div id="titleBar">
-            <span id="logo"></span>
-        </div>
-        <!-- -->
+        <div id="warapper" >
+            <div id="titleBar">
+                <span id="logo"></span>
+            </div>
+            <!-- -->
 
-        <div class="activity active" id="main">
+            <div class="activity active" id="main">
 
-        </div>
-        <div class="activity" id="latestPhotos">
+            </div>
+            <div class="activity" id="latestPhotos">
 
-        </div>
-        <div class="activity" id="ratedPhotos">
+            </div>
+            <div class="activity" id="ratedPhotos">
 
-        </div>
-        <div class="activity" id="myPhotos">
+            </div>
+            <div class="activity" id="myPhotos">
 
-        </div>
+            </div>
 
-        <!-- -->
-        <div id="toolBar">
+            <!-- -->
+            <div id="toolBar">
+                <div class="button">
+                    <div class="stats" id="statBtn">
 
-        </div>
-        
-        <div id="loading">
-            <span>Loading .. </span>
+                    </div>
+                </div>
+                <div class="button main">
+                    <div class="camera" id="cameraBtn">
+
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="people" id="peopleBtn">
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="loading">
+                <span>Loading .. </span>
+            </div>
         </div>
     </body>
 </html>
