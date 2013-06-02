@@ -32,10 +32,10 @@ var FaceUp = {
         
         FaceUp.CameraButton.tab(function() {
             placeActivebutton($(this));
-            navigator.camera.getPicture(function() {
-                
+            navigator.camera.getPicture(function(image) {
+                FaceUp.Activity.rated.image.attr('src', 'data:image/jpeg;base64,'+image);
             }, function() {
-                
+                navigator.notification.alert('Cannot open camera', function() {}, 'Camera Error');
             }, {
                 quality: 50,
                 destinationType: Camera.DestinationType.DATA_URL
