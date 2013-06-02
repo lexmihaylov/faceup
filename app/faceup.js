@@ -11,11 +11,20 @@ var FaceUp = {
 
         FaceUp.body = $('body');
         FaceUp.loading = $('#loading');
+        FaceUp.buttonInit();
     },
     
     buttonInit: function() {
-        FaceUp.PeopleButton.on('touchend', function() {
+        FaceUp.PeopleButton.tab(function() {
             FaceUp.Activity.latest.show();
+        });
+        
+        FaceUp.StatButton.tab(function() {
+            
+        });
+        
+        FaceUp.CameraButton.tab(function() {
+            
         });
     }
 };
@@ -29,8 +38,7 @@ FaceUp.Api = "http://localhost/faceup/";
 FaceUp.Activity = {};
         
 FaceUp.window.on('load', function() {
-    //FaceUp.init();
-    document.addEventListener('deviceready', function() {
+    document.addEventListener("deviceready", function() {
         FaceUp.init();
     }, false);
 });

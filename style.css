@@ -108,7 +108,7 @@ html, body {
     border-left: 1px solid white;
 }
 
-#toolBar div.button > div:hover {
+#toolBar div.button > div.active {
     background-color: rgb(95,103,118);
 }
 
@@ -127,31 +127,19 @@ html, body {
 }
 
 
-#loading {
+.loading {
     display: none;
     position: absolute;
     background: rgba(0,0,0,0.8);
     left: 0;
-    top: 50px;
-    bottom: 50px;
+    top: 0;
     right: 0;
     vertical-align: middle;
     text-align: center;
     z-index: 9999;
     color: white;
     font-weight: bold;
-}
-
-#loading span {
-    width: 100px;
-    height: 26px;
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    
-    margin-left: -50px;
-    margin-top: -13px;
+    padding: 5px;
 }
 
 .image-list {
@@ -161,9 +149,8 @@ html, body {
 }
 
 .image-list li {
-    display: block;
-    padding: 2px;
-    height: 60px;
+    float: left;
+    width: 100%;
     border-bottom: 1px solid rgb(227, 6, 9);
 }
 
@@ -178,6 +165,25 @@ html, body {
     background-size: cover;
 }
 
-.image-list li:hover {
+.image-list li.active {
     background: rgb(96, 174, 200);
+}
+.image-list .progress{
+    display: block;
+    margin: 10px 10px;
+    height: 5px;
+    background: gray;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-list .progress .percentage-preview {
+    top: 0;
+    left: 0;
+    bottom:0;
+    position: absolute;
+    background: blue;
+    
+    border-radius: 10px
 }
