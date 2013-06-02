@@ -36,7 +36,7 @@ var FaceUp = {
             
         });
         
-        $('#takeApicture').tab(function() {
+        $('#takeAPicture').tab(function() {
             navigator.camera.getPicture(function(image) {
                 FaceUp.Activity.rated.image.attr('src', 'data:image/jpeg;base64,'+image);
             }, function() {
