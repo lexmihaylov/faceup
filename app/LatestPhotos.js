@@ -34,7 +34,7 @@ LatestPhotos.prototype.loadData = function(data) {
     for(var j = 0; j < 25; j++)
     for(var i = 0; i < data.length; i++) {
         var item = $('<li/>');
-        
+        var photo_id = data[i].id;
         var image = $('<span class="image" />');
         
         image.css('background-image', 'url('+data[i].photo+')');
@@ -50,8 +50,10 @@ LatestPhotos.prototype.loadData = function(data) {
             append(views).
             append(rating);
         
+        
+        
         item.tab(function() {
-            
+            FaceUp.Activity.pdetails.show(photo_id);
         });
         
         ul.append(item);

@@ -220,11 +220,12 @@ html, body {
 }
 
 .take-picture {
-    position: absolute;
+    position: relative;
     bottom: 15px;
     left: 0;
     right: 0;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .take-picture #takeAPicture {
@@ -265,19 +266,15 @@ html, body {
 }
 
 .tbl-image {
-    display: table;
-    width: 100%;
-    min-height: 100%;
-}
-
-.cell {
-    display: table-cell;
-    vertical-align: middle;
+    display: block;
+    position: relative;
+    padding: 5%;
     text-align: center;
+    
 }
 
-.cell img {
-    width: 90%;
+.tbl-image img {
+    width: 100%;
 }
 
 #latestPhotos {
@@ -296,5 +293,16 @@ html, body {
 
 #latestPhotos .avg_rate:after {
     content: ' Average Rate';
+}
+
+#photoDetails .image {
+    background-position: center;
+    height: 200px;
+    margin-bottom: 10px;
+    
+}
+
+#photoDetails .details {
+    padding: 10px 50px;
 }
 

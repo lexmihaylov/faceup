@@ -14,6 +14,7 @@
         
         <script type="text/javascript" src="app/Activity.js"></script>
         <script type="text/javascript" src="app/Main.js"></script>
+        <script type="text/javascript" src="app/PhotoDetails.js"></script>
         <script type="text/javascript" src="app/LatestPhotos.js"></script>
         <script type="text/javascript" src="app/RatedPhotos.js"></script>
         <script type="text/javascript" src="app/MyPhotos.js"></script>
@@ -41,15 +42,27 @@
             </div>
             <div class="activity hidden" id="ratedPhotos">
                 <div class="tbl-image">
-                    <div class="cell"><img id="imagePreview" src="" /></div>
+                    <img id="imagePreview" src="resource/noimg.jpg" />
                 </div>
                 
                 <div class="take-picture">
-                    <div id="takeAPicture">Take A Picture</div>
+                    <div id="takeAPicture">Take A Photo</div>
                 </div>
             </div>
             <div class="activity hidden" id="myPhotos">
                 <img src="resource/stat.png" />
+            </div>
+            
+            <div class="activity hidden" id="photoDetails">
+                <div class="image">
+                    
+                </div>
+                <div class="details">
+                    
+                </div>
+                <div class="loading hidden">
+                    <span>Loading .. </span>
+                </div>
             </div>
 
             <!-- -->

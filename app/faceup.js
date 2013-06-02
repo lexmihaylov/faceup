@@ -4,6 +4,7 @@ var FaceUp = {
         FaceUp.Activity.latest = new LatestPhotos();
         FaceUp.Activity.rated = new RatedPhotos();
         FaceUp.Activity.my = new MyPhotos();
+        FaceUp.Activity.pdetails = new PhotoDetails();
         
         FaceUp.CameraButton = $('#cameraBtn');
         FaceUp.StatButton = $('#statBtn');
