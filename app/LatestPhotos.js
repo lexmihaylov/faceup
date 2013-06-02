@@ -17,10 +17,6 @@ LatestPhotos.prototype.show = function () {
         
         _this.loading.hide();
     });
-    
-    document.addEventListener("backbutton", function() {
-        FaceUp.Activity.latest.hide();
-    }, false);
 };
 
 

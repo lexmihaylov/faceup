@@ -32,6 +32,7 @@ var FaceUp = {
         
         FaceUp.CameraButton.tab(function() {
             placeActivebutton($(this));
+            FaceUp.Activity.rated.show();
             navigator.camera.getPicture(function(image) {
                 FaceUp.Activity.rated.image.attr('src', 'data:image/jpeg;base64,'+image);
             }, function() {
