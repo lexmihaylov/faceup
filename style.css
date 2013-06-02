@@ -258,6 +258,25 @@ html, body {
 }
 
 #main img {
+    width: 100%
+}
+
+.tbl-image {
+    display: table;
     width: 100%;
+    min-height: 100%;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    
+    width: 100%;
+    min-height: 100%;
+}
+
+.cell img {
+    width: 90%;
 }
 
