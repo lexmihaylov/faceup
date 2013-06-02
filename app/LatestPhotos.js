@@ -8,6 +8,7 @@ LatestPhotos.prototype = $.extend({}, Activity.prototype);
 
 LatestPhotos.prototype.show = function () {
     Activity.prototype.show.call(this);
+    
     var _this = this;
     _this.wrapper.empty();
     _this.loading.show();

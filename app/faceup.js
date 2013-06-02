@@ -9,22 +9,37 @@ var FaceUp = {
         FaceUp.StatButton = $('#statBtn');
         FaceUp.PeopleButton = $('#peopleBtn');
 
+        FaceUp.toolBar = $('#toolBar');
         FaceUp.body = $('body');
         FaceUp.loading = $('#loading');
         FaceUp.buttonInit();
     },
     
     buttonInit: function() {
+        var placeActivebutton = function(button) {
+            FaceUp.toolBar.find('.button.main').removeClass('main');
+            button.parent().addClass('main');
+        };
+        
         FaceUp.PeopleButton.tab(function() {
+            placeActivebutton($(this));
             FaceUp.Activity.latest.show();
         });
         
         FaceUp.StatButton.tab(function() {
-            
+            placeActivebutton($(this));
         });
         
         FaceUp.CameraButton.tab(function() {
-            
+            placeActivebutton($(this));
+            navigator.camera.getPicture(function() {
+                
+            }, function() {
+                
+            }, {
+                quality: 50,
+                destinationType: Camera.DestinationType.DATA_URL
+            });
         });
     }
 };

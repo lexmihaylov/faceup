@@ -16,5 +16,6 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         FaceUp
     </author>
-
+    
+    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
 </widget>
