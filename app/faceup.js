@@ -53,7 +53,7 @@ FaceUp.window = $(window);
 FaceUp.document = $(document);
 
 
-FaceUp.Api = "http://localhost/faceup/";
+FaceUp.Api = "http://158ltd.com:8081/faceup/";
 
 FaceUp.Activity = {};
         

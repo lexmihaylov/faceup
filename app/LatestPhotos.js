@@ -2,6 +2,7 @@ var LatestPhotos = function() {
     Activity.call(this, '#latestPhotos');
     this.wrapper = this.dom.find('.wrapper');
     this.loading = this.dom.find('.loading');
+    this.isLoaded = false;
 };
 
 LatestPhotos.prototype = $.extend({}, Activity.prototype);
@@ -10,13 +11,19 @@ LatestPhotos.prototype.show = function () {
     Activity.prototype.show.call(this);
     
     var _this = this;
-    _this.wrapper.empty();
-    _this.loading.show();
-    $.get(FaceUp.Api + 'latest_photos', function(response) {
-        _this.loadData(response.data);
-        
-        _this.loading.hide();
-    });
+    
+    
+    if(!_this.isLoaded) {
+        _this.loading.show();
+        _this.wrapper.empty();
+        $.get(FaceUp.Api + 'latest_photos', function(response) {
+
+            _this.loadData(response.data);
+
+            _this.isLoaded = true;
+            _this.loading.hide();
+        });
+    }
 };
 
 
