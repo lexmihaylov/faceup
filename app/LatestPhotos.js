@@ -39,9 +39,9 @@ LatestPhotos.prototype.loadData = function(data) {
         
         image.css('background-image', 'url('+data[i].photo+')');
         
-        var text = $('<div class="title">' + data[i].name + '</div>');
+        var text = $('<div class="title"><b>' + data[i].name + '</b></div>');
         var views = $('<div class="votes">' + data[i].votes + '</div>');
-        var rating = $('<div><span>' + data[i].avg_rating+ '%</div>');
+        var rating = $('<div><span class="avg_rate">' + data[i].avg_rating+ '%</div>');
         var progress = $('<div></span><span class="progress"><span class="percentage-preview" style="width: '+data[i].avg_rating+'%"></span></span></div>')
         
         item.append(progress).

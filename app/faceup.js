@@ -28,6 +28,7 @@ var FaceUp = {
         
         FaceUp.StatButton.tab(function() {
             placeActivebutton($(this));
+            FaceUp.Activity.my.show();
         });
         
         FaceUp.CameraButton.tab(function() {
