@@ -60,6 +60,7 @@ FaceUp.Api = "http://158ltd.com:8081/faceup/";
 FaceUp.Activity = {};
         
 FaceUp.window.on('load', function() {
+    
     document.addEventListener("deviceready", function() {
         FaceUp.init();
     }, false);

@@ -22,6 +22,8 @@ LatestPhotos.prototype.show = function () {
 
             _this.isLoaded = true;
             _this.loading.hide();
+            
+            var scroll = new iScroll('latestPhotos');
         });
     }
 };
