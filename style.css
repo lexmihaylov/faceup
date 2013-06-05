@@ -22,7 +22,7 @@ html, body {
     right: 0px;
     bottom: 50px;
     -webkit-transform: translate3d(100%, 0, 0);
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: auto;
     background: #FCF4EA;
 }
@@ -279,6 +279,12 @@ html, body {
 
 #latestPhotos {
     color: rgb(47, 114, 136)
+}
+
+#latestPhotos .wrapper {
+    width: 100%;
+    height: auto;
+    display: inline-block;
 }
 
 #latestPhotos .votes:before {

@@ -18,6 +18,7 @@ PhotoDetails.prototype.show = function (id) {
     $.get(FaceUp.Api + 'photo_details?id='+_this.picid, function(response) {
         _this.loadData(response.data);
         _this.loading.hide();
+        var scroll = new iScroll('photoDetails');
     });
 };
 

@@ -14,6 +14,8 @@ var FaceUp = {
         FaceUp.body = $('body');
         FaceUp.loading = $('#loading');
         FaceUp.buttonInit();
+        
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     },
     
     buttonInit: function() {
